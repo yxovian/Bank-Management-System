@@ -14,7 +14,7 @@ def create_account():
     account = {}
 
     account["id"] = int(input("Enter Account ID: "))
-    account["name"] = input("Enter Account Holder Name: ")
+    account["name"] = input("Enter Account Holder Name: ").strip()
     account["balance"] = float(input("Enter Initial Balance: "))
 
     accounts.append(account)
@@ -112,8 +112,6 @@ def delete_account():
 
             return
 
-
-
 def main():
     while True:
         display_menu()
@@ -139,4 +137,3 @@ def main():
                 print("Invalid Choice Selction")
 
 main()                                      
-
